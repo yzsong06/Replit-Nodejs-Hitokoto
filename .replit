@@ -1,7 +1,17 @@
-{ pkgs }: {
-  deps = [
-		pkgs.nodejs_18
-		pkgs.yarn
-		pkgs.redis
-  ];
-}
+run = ["bash", "main.sh"]
+
+entrypoint = "main.sh"
+
+[nix]
+channel = "stable-23_05"
+
+[deployment]
+run = ["sh", "-c", "bash main.sh"]
+
+[languages]
+
+[languages.bash]
+pattern = "**/{*.sh,*.bash}"
+
+[languages.bash.languageServer]
+start = "bash-language-server start"
