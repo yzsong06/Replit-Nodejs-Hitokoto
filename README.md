@@ -10,3 +10,5 @@ bash <(curl -s https://raw.githubusercontent.com/yzsong06/Replit-Nodejs-Hitokoto
 ```
 
 - 完成后，直接点击上方 **Run** 运行项目即可。
+## 停止项目时一直处于Stopping
+- 可能是Redis服务没有正确停止，可使用`kill 9 {pid}`指令手动杀死Redis服务，Redis Pid请查看Console输出中有关Redis数据库部分详情中的Pid
